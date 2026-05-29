@@ -1,6 +1,18 @@
-# Proof of Concept Lab: Containerlab + Kind
+# Proof of Concept 
 
 Containerlab manages the network devices; Kind provides the compute endpoint(s). Both run as containers on the same Docker host and can be wired together.
+
+## Mininet + BMv2 Stitched into Kind
+
+Mininet with BMv2 provides fully P4-programmable network nodes — you write your own `.p4` programs, compile them with `p4c`, and load them onto BMv2 software switches. Mininet uses Linux network namespaces and veth pairs to create the topology, with no hypervisor or container runtime required.
+
+Since both Mininet nodes and Kind containers are Linux network namespaces on the same host, they can be stitched together via veth pairs. One end of a veth pair attaches to a BMv2 switch port in Mininet, the other end attaches to a Kind node's namespace. This gives you:
+
+- **P4-programmable data plane** — custom match/action logic, INT header insertion, policy enforcement
+- **Compute endpoints via Kind** — Kubernetes workloads for L4–L7 visibility (service mesh, process monitoring, etc.)
+- **Single Linux host** — no hypervisor, no additional infrastructure
+
+This is the path for writing and testing custom P4 programs against a realistic topology that includes compute endpoints.
 
 ## Option A: RARE/freeRtr (P4-native) + Kind
 
