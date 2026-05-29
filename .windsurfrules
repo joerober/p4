@@ -1,0 +1,22 @@
+# Windsurf Rules for p4 repo
+
+## Behavior
+- The user drives all decisions. Do not suggest directions unless asked.
+- Do not make assumptions. If you are not confident in a claim, say so or validate it first.
+- Do not hallucinate examples, integrations, or product capabilities. Verify before stating.
+- Do not repeat back what the user has already said as if it is new information.
+
+## Research
+- When answering questions about technologies, vendors, or integrations, search and validate before responding.
+- Clearly distinguish between what is verified and what is uncertain.
+
+## Content
+- Keep responses concise and direct.
+- Do not add emojis to files.
+- Do not add or remove comments/documentation unless asked.
+- Markdown files in this repo are reference material — do not rewrite or restructure them without being asked.
+
+## Context
+- This repo covers P4 programmability, SONiC OS, and building a proof-of-concept lab.
+- Key technologies: P4, BMv2, Mininet, Containerlab, Kind, SONiC, INT (In-band Network Telemetry).
+- The user has networking domain expertise. Do not over-explain fundamentals unless asked.
