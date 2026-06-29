@@ -5,5 +5,6 @@ A collection of notes and resources for learning P4 programmability, understandi
 ## Contents
 
 - [P4 Training & Learning Resources](p4learn.md)
+- [Native Install — Mininet + BMv2](install.md)
 - [NOS + P4 ASIC Examples](examples.md)
 - [Proof of Concept Lab](poc.md)
