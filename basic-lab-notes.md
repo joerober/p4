@@ -1,5 +1,7 @@
 # Basic Lab Notes
 
+Notes on p4/tutorials/exercises/basic to validate install and start learning.
+
 ## Build → Run Chain
 
 1. `p4c-bm2-ss` compiles `basic.p4` → `build/basic.json` + `build/basic.p4.p4info.txtpb`
@@ -42,7 +44,7 @@ Thrift ports: s1=9090, s2=9091, s3=9092, s4=9093
 ## Cleanup
 
 - `exit` from mininet tears everything down
-- `make stop` if something crashes
+- `make stop` and `make clean` to stop and clean up
 - `sudo mn --clean` as last resort
 
 ## Example: Incomplete basic.p4
@@ -61,7 +63,7 @@ PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
 64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.050 ms
 ```
 
-Success — this is h1 pinging itself (127.0.0.1), not through s1's data plane.
+Success — since s1 has no (management) IPv4 address, h1 resolved s1 to 127.0.0.1. Key point is that this traffic does not traverse through s1's P4 data plane.
 
 ### 2. h1 ping h2 (through s1, exercises the P4 pipeline)
 
