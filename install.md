@@ -10,7 +10,7 @@ Mininet belongs on the host.
 > (adds P4Runtime + gNMI on top of BMv2) is parked as a later direction.
 
 
-## What gets installed
+## What gets installed. 
 
 `jafingerhut/p4-guide`'s `install-p4dev-v10.sh` builds the full toolchain from
 source (~8 GB disk, ≥2 GB RAM): `p4c`, BMv2, PI, Mininet, gRPC/protobuf, ptf,
