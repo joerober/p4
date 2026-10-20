@@ -1,8 +1,10 @@
 # CLAUDE.md
 
-Reference notes on P4 programmability, NOS + P4 ASIC integration, and a
-proof-of-concept lab. Documentation, not a software project — no build or
-test step.
+P4 learning repo — reference notes on P4 programmability, NOS + P4 ASIC
+integration, and a proof-of-concept lab. Documentation, not a software
+project — no build or test step.
+
+Repo: git@github.com:joerober/p4.git
 
 ## Contents
 - `README.md` — index into the topic docs
@@ -12,6 +14,12 @@ test step.
 - `poc.md` — proof-of-concept lab options (Mininet+BMv2, RARE/freeRtr, SONiC-VS, Kind)
 - `sample.p4` — minimal IPv6 LPM forwarder (v1model / BMv2)
 - `sampleP4overview.md` — block-by-block walkthrough of sample.p4
+- `basic-lab-notes.md` — notes from working through the p4lang basic tutorial
+- `exercises/basic/` — P4 exercise files (basic.p4.orig, basic.p4.step2)
+
+## Related repo
+- `~/p4-guide` — Andy Fingerhut's p4-guide (BMv2, p4c, tutorials, demos,
+  install scripts). Cloned locally as a reference/tooling companion.
 
 ## Behavior
 - The user drives all decisions. Don't suggest directions unless asked.
