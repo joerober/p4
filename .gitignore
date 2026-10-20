@@ -1,0 +1,22 @@
+# P4 compiler output
+*.p4i
+*.p4rt
+**/*.json
+!package.json
+
+# BMv2 / Mininet runtime artifacts
+*.log
+*.pcap
+build/
+
+# Python
+*.pyc
+__pycache__/
+*.egg-info/
+
+# OS / editor
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
